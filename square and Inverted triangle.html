@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Square</title>
+    <script>
+        var s = window.prompt("Enter a number");
+        var n = parseInt(s);
+        for (var i = 1; i <= n; ++i) {
+            document.write("*");
+        }
+        document.write("</br>");
+        for (var j = 1; j <= n-2; ++j) {
+            document.write("*");
+            for (var i = 1; i <= (n-2)*2; ++i) {
+                document.write("&nbsp;");
+            }
+            document.write("*</br>");
+        }
+        for (var i = 1; i <= n; ++i) {
+            document.write("*");
+        }
+        document.write("</br>");
+        document.write("</br>");
+        document.write("</br>");
+        document.write("</br>");
+        document.write("</br>");
+        document.write("</br>");
+        document.write("</br>");
+        document.write("</br>");
+        for (var i = 1; i <= n; ++i) {
+            document.write("*");
+        }
+        document.write("</br>");
+        var space_ = 1;
+        var j;
+
+        done: for (j = n; j >= 1; --j){
+            for (var k = 1; k <= space_; ++k) {
+                document.write("&nbsp;");
+            }
+            document.write("*");
+            for (var k = 1; k <= (2*(j-3)) ; ++k) {
+                document.write("&nbsp;");
+            }
+            document.write("*</br>");
+            space_++;
+            if(space_ == n-1)
+                break done;
+        }
+        for (var k = 1; k <= space_; ++k) {
+            document.write("&nbsp;");
+        }
+        document.write("*");
+    </script>
+    <style type="text/css">
+        body {
+            line-height: .45;
+        }
+    </style>
+</head>
+<body>
+
+</body>
+</html>
